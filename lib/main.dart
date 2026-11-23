@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'screens/connection_test_screen.dart';
@@ -9,19 +10,12 @@ Future<void> main() async {
   // Wajib dipanggil jika ada proses async sebelum runApp().
   WidgetsFlutterBinding.ensureInitialized();
 
-<<<<<<< HEAD
   try {
     // 1. Baca kredensial dari file .env (tidak ikut ke GitHub).
     await dotenv.load(fileName: '.env');
 
     final supabaseUrl = dotenv.env['SUPABASE_URL'];
     final supabasePublishableKey = dotenv.env['SUPABASE_PUBLISHABLE_KEY'];
-=======
-  await Supabase.initialize(
-    url: 'https://xteigclclzjfprfnylml.supabase.co',
-    publishableKey: 'sb_publishable_a6j8H21KEZ3CV8vBhhZIKw_dpBNQeWL',
-  );
->>>>>>> 680228d8bf811afc7b4ac6b723767677107513a6
 
     if (supabaseUrl == null ||
         supabaseUrl.isEmpty ||
