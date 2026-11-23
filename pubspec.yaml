@@ -1,21 +1,20 @@
-name: eats_b6
-description: "A new Flutter project."
-publish_to: 'none'
-version: 1.0.0+1
-
+name: eats_auth
+description: Login dan pendaftaran Google untuk eaTS.
+version: 1.0.0
+publish_to: none
 environment:
-  sdk: ^3.13.7
-
+  sdk: '>=3.6.0 <4.0.0'
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
-  supabase_flutter: ^2.18.3
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^6.0.0
-
+  supabase_flutter: ^2.12.4
+  shared_preferences: ^2.5.3
 flutter:
   uses-material-design: true
+  assets:
+    - assets/eats.png
+    - assets/google.png
+  fonts:
+    - family: Plus Jakarta Sans
+      fonts:
+        - asset: assets/PlusJakartaSans.ttf
